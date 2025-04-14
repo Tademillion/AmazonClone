@@ -1,0 +1,232 @@
+.account-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+.account-header {
+    margin-bottom: 2rem;
+}
+
+.account-header h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.account-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.account-tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.account-tab.active {
+    color: var(--primary-color);
+}
+
+.account-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.account-form {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.account-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: #0066c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #FFD814;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.sign-in-btn:hover {
+    background: #F7CA00;
+}
+
+.create-account-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #f0f0f0;
+    border: 1px solid #a6a6a6;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.create-account-btn:hover {
+    background: #e7e7e7;
+}
+
+.divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.divider span {
+    background: white;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    color: #767676;
+    font-size: 14px;
+}
+
+.help-links {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.help-links h3 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.help-links ul {
+    list-style: none;
+}
+
+.help-links li {
+    margin-bottom: 0.5rem;
+}
+
+.help-links a {
+    color: #0066c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.help-links a:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.new-customer {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.new-customer h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.new-customer p {
+    font-size: 14px;
+    color: #565959;
+    margin-bottom: 1rem;
+}
+
+.new-customer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.new-customer li {
+    font-size: 14px;
+    color: #565959;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.new-customer li::before {
+    content: '✓';
+    color: var(--success-color);
+} 

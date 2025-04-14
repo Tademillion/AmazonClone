@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders - Amazon Clone</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Amazon Logo" width="100">
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="GET">
+                    <input type="text" placeholder="Search for products..." name="q">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/account.html">Account</a></li>
+                    <li><a href="../AMZN/account.html">Orders</a></li>
+                    <li><a href="../AMZN/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Orders Section -->
+    <main class="orders-container">
+        <div class="orders-header">
+            <h1>Your Orders</h1>
+            <div class="order-filters">
+                <select>
+                    <option>All Orders</option>
+                    <option>Past 30 days</option>
+                    <option>Past 3 months</option>
+                    <option>2024</option>
+                </select>
+                <select>
+                    <option>All Status</option>
+                    <option>Delivered</option>
+                    <option>Shipped</option>
+                    <option>Processing</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Order Card -->
+        <div class="order-card">
+            <div class="order-header">
+                <div>
+                    <span class="order-date">Order Placed: January 15, 2024</span>
+                    <span class="order-number">Order #123-4567890-1234567</span>
+                </div>
+                <span class="order-status status-delivered">Delivered</span>
+            </div>
+            <div class="order-items">
+                <div class="order-item">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Smartphone X">
+                    <div class="item-details">
+                        <h3>Smartphone X</h3>
+                        <p>Color: Black | Storage: 256GB</p>
+                        <p class="item-price">$999.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-actions">
+                <button class="btn btn-outline">Track Package</button>
+                <button class="btn btn-outline">Leave Seller Feedback</button>
+                <button class="btn btn-outline">Write a Product Review</button>
+            </div>
+        </div>
+
+        <!-- Another Order Card -->
+        <div class="order-card">
+            <div class="order-header">
+                <div>
+                    <span class="order-date">Order Placed: January 10, 2024</span>
+                    <span class="order-number">Order #123-4567890-1234568</span>
+                </div>
+                <span class="order-status status-shipped">Shipped</span>
+            </div>
+            <div class="order-items">
+                <div class="order-item">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Laptop Pro">
+                    <div class="item-details">
+                        <h3>Laptop Pro</h3>
+                        <p>Color: Silver | Storage: 512GB</p>
+                        <p class="item-price">$1499.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-actions">
+                <button class="btn btn-outline">Track Package</button>
+                <button class="btn btn-outline">View Invoice</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/press">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="/sell">Sell products</a></li>
+                    <li><a href="/affiliate">Become an Affiliate</a></li>
+                    <li><a href="/advertise">Advertise Your Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="/shipping">Shipping & Delivery</a></li>
+                    <li><a href="/returns">Returns & Replacements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+</html> 

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Amazon Clone</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Amazon Logo" width="100">
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="GET">
+                    <input type="text" placeholder="Search for products..." name="q">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/account">Account</a></li>
+                    <li><a href="/orders">Orders</a></li>
+                    <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <main class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <p>Price</p>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <!-- Item 1 -->
+                <div class="cart-item" data-item-id="1">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Smartphone X">
+                    <div class="item-details">
+                        <h3 class="item-title">Smartphone X - 256GB (Unlocked)</h3>
+                        <p class="item-price">$999.99</p>
+                        <p class="item-stock">In Stock</p>
+                        <div class="item-actions">
+                            <div class="quantity-selector">
+                                <label for="quantity1">Qty:</label>
+                                <select id="quantity1">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <span class="delete-btn">Delete</span>
+                            <span class="delete-btn">Save for later</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item" data-item-id="2">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Laptop Pro">
+                    <div class="item-details">
+                        <h3 class="item-title">Laptop Pro - 512GB SSD, 16GB RAM</h3>
+                        <p class="item-price">$1499.99</p>
+                        <p class="item-stock">In Stock</p>
+                        <div class="item-actions">
+                            <div class="quantity-selector">
+                                <label for="quantity2">Qty:</label>
+                                <select id="quantity2">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <span class="delete-btn">Delete</span>
+                            <span class="delete-btn">Save for later</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <div class="summary-header">Order Summary</div>
+            <div class="subtotal">
+                <span>Subtotal (2 items):</span>
+                <span>$2499.98</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <div class="gift-card">
+                <i class="fas fa-gift"></i>
+                <span>Add a gift card</span>
+            </div>
+        </div>
+
+        <!-- Empty Cart State -->
+        <div class="empty-cart" style="display: none;">
+            <h2>Your Amazon Cart is empty</h2>
+            <p>Your shopping cart is waiting. Give it purpose – fill it with groceries, clothing, household supplies, electronics, and more.</p>
+            <button class="shop-btn">Shop today's deals</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/press">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="/sell">Sell products</a></li>
+                    <li><a href="/affiliate">Become an Affiliate</a></li>
+                    <li><a href="/advertise">Advertise Your Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="/shipping">Shipping & Delivery</a></li>
+                    <li><a href="/returns">Returns & Replacements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 
