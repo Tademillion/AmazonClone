@@ -1,164 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon Sign In</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/account.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Amazon Logo" width="100">
-                </a>
-            </div>
-            <div class="search-bar">
-                <form action="/search" method="GET">
-                    <input type="text" placeholder="Search for products..." name="q">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/account">Account</a></li>
-                    <li><a href="/orders">Orders</a></li>
-                    <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                </ul>
-            </nav>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/account.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+  </head>
+  <body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+      <a href="/">
+        <img
+          src="images/amazon-logo-black.png"
+          alt="Amazon"
+          class="amazon-logo"
+        />
+      </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="auth-container">
+      <div class="auth-box" id="signInBox">
+        <h1>Sign in</h1>
+        <form id="emailForm">
+          <div class="form-group">
+            <label for="email">Email or mobile phone number</label>
+            <input type="text" id="email" name="email" required />
+          </div>
+          <button type="submit" class="auth-button">Continue</button>
+          <div class="terms">
+            By continuing, you agree to Amazon's
+            <a href="/conditions.html">Conditions of Use</a> and
+            <a href="/privacy.html">Privacy Notice</a>.
+          </div>
+          <div class="help-section">
+            <details>
+              <summary>Need help?</summary>
+              <a href="/forgot-password.html">Forgot your password?</a>
+              <a href="/other-issues.html">Other issues with Sign-In</a>
+            </details>
+          </div>
+        </form>
+      </div>
+
+      <div class="new-to-amazon">
+        <div class="divider">
+          <h5>New to Amazon?</h5>
         </div>
-    </header>
-
-    <!-- Account Section -->
-    <main class="account-container">
-        <div class="account-content">
-            <div class="account-header">
-                <h1>Sign in</h1>
-            </div>
-
-            <div class="account-tabs">
-                <div class="account-tab active" data-tab="login">Sign in</div>
-                <div class="account-tab" data-tab="register">Create account</div>
-            </div>
-
-            <!-- Login Form -->
-            <form class="account-form active" id="loginForm">
-                <div class="form-group">
-                    <label for="email">Email or mobile phone number</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-actions">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember" name="remember">
-                        <label for="remember">Keep me signed in</label>
-                    </div>
-                    <a href="/forgot-password" class="forgot-password">Forgot your password?</a>
-                </div>
-                <button type="submit" class="sign-in-btn">Sign in</button>
-                <div class="divider">
-                    <span>New to Amazon?</span>
-                </div>
-                <button type="button" class="create-account-btn" onclick="document.querySelector('.account-tab[data-tab=\'register\']').click()">
-                    Create your Amazon account
-                </button>
-            </form>
-
-            <!-- Register Form -->
-            <form class="account-form" id="registerForm">
-                <div class="form-group">
-                    <label for="name">Your name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="regEmail">Email</label>
-                    <input type="email" id="regEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="regPassword">Password</label>
-                    <input type="password" id="regPassword" name="password" required>
-                    <p style="font-size: 12px; color: #565959; margin-top: 0.5rem;">
-                        Passwords must be at least 6 characters.
-                    </p>
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Re-enter password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
-                </div>
-                <button type="submit" class="sign-in-btn">Create your Amazon account</button>
-                <div class="divider">
-                    <span>Already have an account?</span>
-                </div>
-                <button type="button" class="create-account-btn" onclick="document.querySelector('.account-tab[data-tab=\'login\']').click()">
-                    Sign in
-                </button>
-            </form>
-
-            <div class="help-links">
-                <h3>Need help?</h3>
-                <ul>
-                    <li><a href="/help">Forgot your password?</a></li>
-                    <li><a href="/help">Other issues with Sign-In</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="new-customer">
-            <h2>New to Amazon?</h2>
-            <p>Create an account to get started today.</p>
-            <ul>
-                <li>Fast checkout</li>
-                <li>Track orders</li>
-                <li>Access your order history</li>
-                <li>Save items to your wish list</li>
-            </ul>
-            <button type="button" class="create-account-btn" onclick="document.querySelector('.account-tab[data-tab=\'register\']').click()">
-                Create your Amazon account
-            </button>
-        </div>
+        <a href="/register.html" class="create-account-button"
+          >Create your Amazon account</a
+        >
+      </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Get to Know Us</h3>
-                <ul>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/press">Press Releases</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Make Money with Us</h3>
-                <ul>
-                    <li><a href="/sell">Sell products</a></li>
-                    <li><a href="/affiliate">Become an Affiliate</a></li>
-                    <li><a href="/advertise">Advertise Your Products</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Let Us Help You</h3>
-                <ul>
-                    <li><a href="/help">Help</a></li>
-                    <li><a href="/shipping">Shipping & Delivery</a></li>
-                    <li><a href="/returns">Returns & Replacements</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
-        </div>
+    <footer class="auth-footer">
+      <div class="footer-links">
+        <a href="/conditions.html">Conditions of Use</a>
+        <a href="/privacy.html">Privacy Notice</a>
+        <a href="/help.html">Help</a>
+      </div>
+      <div class="copyright">
+        © 1996-2024, Amazon.com, Inc. or its affiliates
+      </div>
     </footer>
 
-    <script src="js/common.js"></script>
+    <!-- Scripts -->
+    <script src="js/carousel.js"></script>
     <script src="js/account.js"></script>
-</body>
-</html> 
+
+    <!-- Debug script to verify carousel initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM loaded");
+        // Check if carousel container exists
+        setTimeout(() => {
+          const container = document.querySelector(".carousel-container");
+          console.log("Carousel container:", container);
+          const slides = document.querySelectorAll(".carousel-slide");
+          console.log("Number of slides:", slides.length);
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

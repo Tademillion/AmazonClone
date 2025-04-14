@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registration</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="/">
+            <img src="images/amazon-logo-black.png" alt="Amazon" class="amazon-logo">
+        </a>
+    </div>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h1>Create account</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="First and last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Mobile number or email</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters" required>
+                    <div class="password-hint">
+                        <i class="info-icon">i</i>
+                        Passwords must be at least 6 characters.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-check">Re-enter password</label>
+                    <input type="password" id="password-check" name="password-check" required>
+                </div>
+
+                <button type="submit" class="auth-button">Continue</button>
+
+                <div class="terms">
+                    By creating an account, you agree to Amazon's <a href="/conditions">Conditions of Use</a> and <a href="/privacy">Privacy Notice</a>.
+                </div>
+
+                <div class="help-section">
+                    <details>
+                        <summary>Need help?</summary>
+                        <a href="/help">Forgot your password?</a>
+                        <a href="/help">Other issues with Sign-Up</a>
+                    </details>
+                </div>
+            </form>
+        </div>
+
+        <div class="sign-in-link">
+            Already have an account? <a href="/signin">Sign in</a>
+        </div>
+    </main>
+
+    <footer class="auth-footer">
+        <div class="footer-links">
+            <a href="/conditions">Conditions of Use</a>
+            <a href="/privacy">Privacy Notice</a>
+            <a href="/help">Help</a>
+        </div>
+        <div class="copyright">
+            © 1996-2024, Amazon.com, Inc. or its affiliates
+        </div>
+    </footer>
+
+    <script src="js/account.js"></script>
+</body>
+</html> 
